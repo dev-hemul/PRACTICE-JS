@@ -1,5 +1,4 @@
 body {
-    font-size: 16px;
     color: #000000;
     overflow: hidden;
 }
@@ -82,5 +81,18 @@ body {
   }
   62%{
     transform: translate(-22px,5px) skew(21deg);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .inner-page {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 52px;
+  }
+
+  .err-code,
+  .err-text {
+    text-align: center;
   }
 }
