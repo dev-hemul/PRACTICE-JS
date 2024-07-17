@@ -1,18 +1,17 @@
-function fetchUserInfo (callback) {
-
-	setTimeout(() => {
-		/// fetch
-		const data = {id: 1, name: 'alex'};
-		callback(data);
-}, 2000);
-
-}
-
-
 function run () {
-	fetchUserInfo((userInfo) => {
-		console.log(userInfo);
-	});
+	const data = new Promise ((resolve, reject) => {
+		setTimeout(() => {
+			/// fetch
+			const data = {id: 1, name: 'Alex'};
+			resolve(data)
+		}, 1000)
+	})
+
+	data.then((userData) => {
+		console.log(userData);
+	})
+
+	console.log(data);
 }
 
 run();
