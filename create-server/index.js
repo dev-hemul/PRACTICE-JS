@@ -1,18 +1,4 @@
-function run () {
-	const data = new Promise ((resolve, reject) => {
-		setTimeout(() => {
-			/// fetch
-			const data = {id: 1, name: 'Alex'};
-			resolve(data)
-		}, 1000)
-	})
+// https://jsonplaceholder.typicode.com/posts
 
-	data.then((userData) => {
-		console.log(userData);
-	})
-
-	console.log(data);
-}
-
-run();
+	fetch('https://jsonplaceholder.typicode.com/posts');
 
