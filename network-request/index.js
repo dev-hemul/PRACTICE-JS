@@ -1,5 +1,5 @@
 // Приклад роботи з fetch
-// Використання методу GET
+// Використання методу GET, отримаю якісь дані
 
 /*fetch('https://jsonplaceholder.typicode.com/users/10', {
 	method: 'GET',
@@ -13,7 +13,7 @@
 // Використання методу POST
 // Відправляю якісь дані на сервер
 
-const newPost = {
+/*const newPost = {
     "userId": 1,
     "id": 77777,
     "title": "hello",
@@ -32,7 +32,30 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 	}
 
 	console.log(data);
-});
+});*/
+
+
+// Використання Axios
+import axios from "axios";
+
+const url = "https://jsonplaceholder.typicode.com/posts";
+
+// GET запит
+axios.get(url).then((data) => {
+	console.log(data);
+})
+
+// POST запит
+
+axios.post(
+	'https://jsonplaceholder.typicode.com/posts/',{
+	title: 'test'
+}
+).then((response) => {
+	console.log(response);
+})
+
+
 
 
 
