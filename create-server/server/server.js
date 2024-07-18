@@ -22,7 +22,12 @@ const server = http.createServer(async (req, res) => {
 		res.statusCode = 200;
 		res.setHeader('Content-Type', 'image/png');
 		res.end(css);
-	}	else {
+	}else if (url === '/index.js') {
+		const js = await fs.readFile('client/index.js', 'utf8');
+		res.statusCode = 200;
+		res.setHeader('Content-Type', 'text/javascript; charset=utf-8');
+		res.end(js);
+	}else {
 		const page404 = await fs.readFile('client/page404.html', 'utf8');
 		res.statusCode = 200;
 		res.setHeader('Content-Type', 'text/html; charset=utf-8');
