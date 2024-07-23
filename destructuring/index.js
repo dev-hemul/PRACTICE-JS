@@ -1,4 +1,20 @@
+// Можно сразу присваивать значения индексам масива, чтобы не создавать лишние переменные.
+// Если, например, нужен только последний или ключ - то ставлю запитые (на то к-во ключей сколько есть ключей в массиве) и пишу название последнего ключа.
+
 const [one, two, three, four, five] = [1, 2, 3, 4, 5];
 
-console.log(five);
+// Можно сразу присваивать значения ключам объекта (порядок не важен в отличие от масива)
+
+const {user_name, user_page} = {user_name: 1, user_page: 2}
+
+console.log(user_name);
+console.log(user_page);
+
+fetch('https://sinoptik.ua/ajax.php?events=GetOperaGA,GetLastCities&id=303010783')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  });
 
