@@ -7,14 +7,7 @@ const [one, two, three, four, five] = [1, 2, 3, 4, 5];
 
 const {user_name, user_page} = {user_name: 1, user_page: 2}
 
-console.log(user_name);
-console.log(user_page);
 
-fetch('https://sinoptik.ua/ajax.php?events=GetOperaGA,GetLastCities&id=303010783')
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  });
+
+
 
